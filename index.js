@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'; // Замість YOUR_TELEGRAM_BOT_TOKEN вставте свій токен
+const TOKEN = '7408528350:AAGp4FbKaJCPE9EGMUvUWfD4DxE0h8TcNHI';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TOKEN}`;
 
 app.use(bodyParser.json());
@@ -47,5 +47,5 @@ app.post(`/webhook/${TOKEN}`, async (req, res) => {
 // Запуск серверу
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-    console.log(`Set webhook: ${TELEGRAM_API_URL}/setWebhook?url=https://YOUR_DOMAIN/webhook/${TOKEN}`);
+    console.log(`Set webhook: ${TELEGRAM_API_URL}/setWebhook?url=https://dn-telegram-bot-deba6c6238ad.herokuapp.com/webhook/${TOKEN}`);
 });
